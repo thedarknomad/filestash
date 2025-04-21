@@ -16,9 +16,11 @@ build_frontend_old:
 	mkdir -p ./server/ctrl/static/www/canary/
 	cp -R ./public/assets ./server/ctrl/static/www/canary/
 	cp -R ./public/*.html ./server/ctrl/static/www/canary/
+	rm -rf node_modules  # added to free up space after build
 
 build_backend:
-	CGO_ENABLED=1 go build --tags "fts5" -o dist/filestash cmd/main.go
+	#CGO_ENABLED=1 go build --tags "fts5" -o dist/filestash cmd/main.go
+	CGO_ENABLED=1 go build -ldflags="-s -w" -o dist/filestash cmd/main.go
 
 build_backend_arm64:
 	CGO_ENABLED=1 GOOS=linux GOARCH=arm GOARM=7 CC=arm-linux-gnueabihf-gcc go build -o dist/filestash cmd/main.go

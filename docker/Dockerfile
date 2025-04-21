@@ -44,4 +44,4 @@ RUN apt-get update > /dev/null && \
 
 USER filestash
 CMD ["/app/filestash"]
-EXPOSE 8334
+EXPOSE 8335
