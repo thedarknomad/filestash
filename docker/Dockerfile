@@ -1,8 +1,8 @@
 # STEP1: CLONE THE CODE
 FROM alpine/git as builder_prepare
 WORKDIR /home/
-ARG GIT_REPO=https://github.com/mickael-kerjean/filestash
-ARG GIT_BRANCH=master
+ARG GIT_REPO=https://github.com/thedarknomad/filestash
+ARG GIT_BRANCH=main
 RUN git clone --depth 1 --single-branch --branch ${GIT_BRANCH} ${GIT_REPO}
 
 # STEP2: BUILD FRONTEND
