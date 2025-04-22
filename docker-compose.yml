@@ -34,3 +34,4 @@ services:
 
 volumes:
     filestash: {}
+wopi_server:9980

@@ -44,6 +44,6 @@
 
 # USER filestash
 # CMD ["/app/filestash"]
-# EXPOSE 8335
+# EXPOSE 8334
 
 FROM machines/filestash:latest
