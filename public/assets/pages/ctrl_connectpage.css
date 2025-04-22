@@ -1,7 +1,0 @@
-.component_page_connect{
-    background: var(--primary);
-    height: 100%;
-}
-.dark-mode .component_page_connect{
-    background: var(--bg-color);
-}
